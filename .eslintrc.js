@@ -1,49 +1,86 @@
+'use strict';
+
 module.exports = {
-  root: true,
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 6,
     sourceType: 'module'
   },
-  plugins: [
-    'ember'
-  ],
   extends: [
-    'eslint:recommended',
-    'plugin:ember/recommended'
+    'eslint:recommended'
   ],
-  env: {
-    browser: true
-  },
   rules: {
-  },
-  overrides: [
-    // node files
-    {
-      files: [
-        '.eslintrc.js',
-        '.template-lintrc.js',
-        'ember-cli-build.js',
-        'testem.js',
-        'blueprints/*/index.js',
-        'config/**/*.js',
-        'lib/*/index.js',
-        'server/**/*.js'
-      ],
-      parserOptions: {
-        sourceType: 'script'
-      },
-      env: {
-        browser: false,
-        node: true
-      },
-      plugins: ['node'],
-      rules: Object.assign({}, require('eslint-plugin-node').configs.recommended.rules, {
-        // add your custom rules and overrides for node files here
-
-        // this can be removed once the following is fixed
-        // https://github.com/mysticatea/eslint-plugin-node/issues/77
-        'node/no-unpublished-require': 'off'
-      })
-    }
-  ]
+    'array-bracket-spacing': ['error', 'never'],
+    'arrow-parens': ['error', 'always'],
+    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+    'comma-dangle': ['error', 'never'],
+    'comma-spacing': ['error', {
+      'before': false,
+      'after': true
+    }],
+    'comma-style': ['error', 'last'],
+    'curly': ['error', 'all'],
+    'dot-notation': 'error',
+    'dot-location': ['error', 'property'],
+    'eqeqeq': ['error', 'always'],
+    'eol-last': ['error', 'always'],
+    'func-call-spacing': 'error',
+    'generator-star-spacing': ['error', {
+      'before': false,
+      'after': true
+    }],
+    'indent': ['error', 2, { 'SwitchCase': 1 }],
+    'key-spacing': ['error', {
+      'beforeColon': false,
+      'afterColon': true
+    }],
+    'keyword-spacing': ['error', {
+      'overrides': {
+        'catch': {
+          'after': false
+        }
+      }
+    }],
+    'max-statements-per-line': ['error', { max: 2 }],
+    'new-cap': ['error'],
+    'no-console': ['error', { 'allow': ['error'] }],
+    'no-multiple-empty-lines': ['error', { 'max': 1 }],
+    'no-trailing-spaces': 'error',
+    'no-useless-concat': 'error',
+    'no-useless-rename': 'error',
+    'no-var': 'error',
+    'object-curly-spacing': ['error', 'always'],
+    'object-shorthand': ['error', 'always'],
+    'one-var': ['error', {
+      'uninitialized': 'always',
+      'initialized': 'never'
+    }],
+    'operator-linebreak': ['error', 'before'],
+    'prefer-const': ['error', {
+      destructuring: 'all',
+      ignoreReadBeforeAssign: false
+    }],
+    'prefer-destructuring': 'error',
+    'prefer-template': 'error',
+    'prefer-spread': 'error',
+    'quotes': ['error', 'single', { 'avoidEscape': true }],
+    'semi': ['error', 'always'],
+    'semi-spacing': ['error', {
+      'before': false,
+      'after': true
+    }],
+    'space-before-blocks': ['error', 'always'],
+    'space-before-function-paren': ['error', 'never'],
+    'space-in-parens': ['error', 'never'],
+    'space-infix-ops': 'error',
+    'space-unary-ops': ['error', {
+      'words': false,
+      'nonwords': false
+    }],
+    'spaced-comment': ['error', 'always'],
+    'valid-jsdoc': ['error', {
+      requireParamDescription: false,
+      requireReturn: false,
+      requireReturnDescription: false
+    }]
+  }
 };
