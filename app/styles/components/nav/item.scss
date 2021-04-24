@@ -1,0 +1,22 @@
+.NavItem {
+  font-size: var(--fontSize--s);
+
+  &[data-is-active] + & {
+    opacity: 0.2;
+  }
+
+  &-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid var(--textColor--primary);
+    width: 25px;
+    height: 25px;
+
+    .NavItem[data-is-active] & {
+      border-color: var(--color-brand);
+      color: var(--color-brand);
+    }
+  }
+}

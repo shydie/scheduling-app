@@ -1,0 +1,26 @@
+.ServicesItem {
+  @extend %Card;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  > :first-child {
+    margin-right: auto;
+  }
+
+  &-title {
+    font-size: var(--fontSize--m);
+  }
+
+  &-description {
+    font-size: var(--fontSize--s);
+    color: var(--textColor--secondary);
+    margin-top: var(--spacing--xs);
+  }
+
+  &-button {
+    @extend %Button, %Button--brand;
+    margin-right: 0;
+  }
+}

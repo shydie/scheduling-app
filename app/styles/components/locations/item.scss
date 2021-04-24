@@ -1,0 +1,20 @@
+.LocationsItem {
+  @extend %Card;
+
+  &-title {
+    font-size: var(--fontSize--m);
+  }
+
+  &-description {
+    font-size: var(--fontSize--s);
+    color: var(--textColor--secondary);
+    margin-top: var(--spacing--xs);
+  }
+
+  &-button {
+    @extend %Button--brand;
+
+    margin-top: var(--spacing--xs);
+    width: 100%;
+  }
+}

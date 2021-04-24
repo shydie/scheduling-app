@@ -1,0 +1,5 @@
+.NavList {
+  &-item:not(:first-child) {
+    margin-top: var(--spacing--s);
+  }
+}

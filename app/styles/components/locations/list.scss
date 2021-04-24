@@ -1,0 +1,14 @@
+.LocationsList {
+  --LocationsList-gridGap: var(--spacing--s);
+  --LocationsList-columnWidth:
+    calc(
+      (100% - var(--LocationsList-gridGap) * calc(var(--tiles-colCount) - 1))
+      / var(--tiles-colCount)
+    );
+  --tiles-colCount: 3;
+
+  display: grid;
+  grid-template-columns: repeat(var(--tiles-colCount), var(--LocationsList-columnWidth));
+  grid-gap: var(--ProjectTiles-gridGap);
+  grid-gap: var(--spacing--m);
+}
