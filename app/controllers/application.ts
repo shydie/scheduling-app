@@ -17,11 +17,11 @@ export default class Application extends Controller {
     },
     {
       title: 'Select a service',
-      route: 'services',
+      route: 'services.index',
     },
     {
       title: 'Select location',
-      route: 'locations',
+      route: 'services.locations',
     }
   ]
 }
