@@ -1,0 +1,17 @@
+{{#let "ServicesItem" as |scope|}}
+  <div class={{scope}} ...attributes>
+    <div class="{{scope}}-info">
+      <p class="{{scope}}-title">{{@model.description}}</p>
+      <p class="{{scope}}-description">{{@model.duration}} minutes</p>
+    </div>
+
+    <LinkTo
+      class="{{scope}}-button"
+      @model={{@model.id}}
+      @route="services.locations"
+      @tagName="button"
+    >
+      Select
+    </LinkTo>
+  </div>
+{{/let}}

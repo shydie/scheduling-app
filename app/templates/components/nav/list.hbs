@@ -1,0 +1,12 @@
+{{#let "NavList" as |scope|}}
+  <ul class={{scope}} ...attributes>
+    {{#each @items as |item index|}}
+      <Nav::Item
+        class="{{scope}}-item"
+        @index={{add index 1}}
+        @isActive={{eq item.route @activeItem}}
+        @model={{item}}
+      />
+    {{/each}}
+  </ul>
+{{/let}}

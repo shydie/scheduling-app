@@ -1,0 +1,7 @@
+{{#let "ServicesList" as |scope|}}
+  <div class={{scope}} ...attributes>
+    {{#each @services as |service|}}
+      <Services::Item @model={{service}} />
+    {{/each}}
+  </div>
+{{/let}}

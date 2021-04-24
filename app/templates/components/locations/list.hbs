@@ -1,0 +1,7 @@
+{{#let "LocationsList" as |scope|}}
+  <div class={{scope}} ...attributes>
+    {{#each @locations as |location|}}
+      <Locations::Item @model={{location}} />
+    {{/each}}
+  </div>
+{{/let}}

@@ -12,7 +12,7 @@ export default class extends Model {
   isVideo!: boolean
 
   @attr('boolean')
-  isPublic!: false
+  isPublic!: boolean
 
   @fragment('fragments/geolocation')
   geolocation!: Geolocation;

@@ -1,0 +1,12 @@
+{{#let "LocationsItem" as |scope|}}
+  <div class={{scope}} ...attributes>
+    <div class="{{scope}}-map" />
+
+    <p class="{{scope}}-title">{{@model.name}}</p>
+    <p class="{{scope}}-description">{{@model.phone}}</p>
+
+    <button class="{{scope}}-button">
+      Select
+    </button>
+  </div>
+{{/let}}

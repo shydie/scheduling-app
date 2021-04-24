@@ -1,5 +1,19 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+{{#let "Application" as |scope|}}
+  <div class={{scope}}>
+    <header class="{{scope}}-header">
+      <h2>Request an appointment</h2>
+    </header>
 
-{{outlet}}
+    <nav class="{{scope}}-nav">
+      <Nav::List
+        @items={{this.navItems}}
+        @activeItem={{this.router.currentRouteName}}
+      />
+    </nav>
+
+    <main class="{{scope}}-main">
+      {{outlet}}
+    </main>
+
+  </div>
+{{/let}}

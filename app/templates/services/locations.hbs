@@ -1,0 +1,5 @@
+{{#let "ServicesLocations" as |scope|}}
+  <div class={{scope}}>
+    <Locations::List class="{{scope}}-list" @locations={{this.model.offices}} />
+  </div>
+{{/let}}

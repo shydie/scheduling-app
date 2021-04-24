@@ -1,0 +1,9 @@
+{{#let "NavItem" as |scope|}}
+  <li class={{scope}}
+    data-is-active={{@isActive}}
+    ...attributes
+  >
+    <span class="{{scope}}-index">{{@index}}</span>
+    <span class="{{scope}}-text">{{@model.title}}</span>
+  </li>
+{{/let}}
