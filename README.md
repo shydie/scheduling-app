@@ -20,6 +20,7 @@ You will need the following things properly installed on your computer.
 * `yarn install`
 
 ## Running / Development
+Since CORS is not configured on API side we should visit https://cors-anywhere.herokuapp.com/corsdemo first and click on "Request temporary access to the DEMO server" button. This will allow us skip CORS limitations temporary
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
