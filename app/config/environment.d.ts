@@ -10,5 +10,7 @@ declare const config: {
   podModulePrefix: string;
   locationType: string;
   rootURL: string;
+  host: string;
+  clinicianId: string;
   APP: Record<string, unknown>;
 };
