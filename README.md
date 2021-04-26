@@ -14,7 +14,9 @@ You will need the following things properly installed on your computer.
 * [Google Chrome](https://google.com/chrome/)
 
 ## Installation
-`.env` file is already created and contains default env variables
+You should create `.env` file.
+`.default-env` file is already contains default env variables.
+You can use it as example to specify your own or just copy values from it.
 
 * `git clone <repository-url>` this repository
 * `cd scheduling-app`
