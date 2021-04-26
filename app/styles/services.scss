@@ -1,0 +1,10 @@
+.Services {
+  &-item:not(:first-child) {
+    margin-top: var(--spacing--m);
+  }
+
+  &-button {
+    @extend %Button, %Button--brand;
+    margin-right: 0;
+  }
+}

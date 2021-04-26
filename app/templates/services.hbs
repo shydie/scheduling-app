@@ -1,1 +1,18 @@
-{{outlet}}
+{{#let "Services" as |scope|}}
+  <div class={{scope}}>
+    <div class="{{scope}}-list">
+      {{#each this.model.cptCodes as |cptCode|}}
+        <Services::Item @model={{cptCode}}>
+          <LinkTo
+            class="{{scope}}-button"
+            @route="locations"
+            @query={{hash clinicianId=this.clinicianId cptCodeId=cptCode.id}}
+            @tagName="button"
+          >
+            Select
+          </LinkTo>
+        </Services::Item>
+      {{/each}}
+    </div>
+  </div>
+{{/let}}

@@ -18,9 +18,4 @@
     color: var(--textColor--secondary);
     margin-top: var(--spacing--xs);
   }
-
-  &-button {
-    @extend %Button, %Button--brand;
-    margin-right: 0;
-  }
 }

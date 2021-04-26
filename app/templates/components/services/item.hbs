@@ -5,13 +5,6 @@
       <p class="{{scope}}-description">{{@model.duration}} minutes</p>
     </div>
 
-    <LinkTo
-      class="{{scope}}-button"
-      @model={{@model.id}}
-      @route="services.locations"
-      @tagName="button"
-    >
-      Select
-    </LinkTo>
+    {{yield}}
   </div>
 {{/let}}
